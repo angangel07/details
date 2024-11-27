@@ -1,0 +1,49 @@
+body {
+
+    user-select: none;
+    margin: 0;
+    background: black;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.center-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: lime;
+    font-size: 22px;
+    text-shadow: 0 0 10px lime, 0 0 20px lime, 0 0 30px lime;
+    animation: glow 2s infinite alternate;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    color: lime;
+    text-shadow: 0 0 5px lime, 0 0 10px lime;
+    font-size: 14px;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px lime, 0 0 20px lime, 0 0 30px lime;
+    }
+
+    100% {
+        text-shadow: 0 0 20px lime, 0 0 30px lime, 0 0 40px lime;
+    }
+}

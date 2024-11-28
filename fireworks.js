@@ -463,7 +463,7 @@ function animate() {
 animate();
 
 // Disable right-click
-//document.addEventListener('contextmenu', (e) => e.preventDefault());
+document.addEventListener('contextmenu', (e) => e.preventDefault());
 
 
 // ANGEL ANIMATION FORM HERE

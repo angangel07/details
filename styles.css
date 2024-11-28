@@ -94,31 +94,30 @@ footer {
 
 /* ANGEL ANIMATION FORM HERE */
 #angelLogo {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 6rem;
-    font-weight: bold;
-    color: transparent;
-    /* Initially transparent for the fade-in effect */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    /* Light border for the letters */
-    border-radius: 10px;
-    padding: 20px;
-    opacity: 0;
-    text-shadow:
-        0 0 5px rgba(255, 255, 255, 0.9),
-        /* Sharper, brighter glow */
-        0 0 10px rgba(255, 255, 255, 0.7),
-        /* Medium glow */
-        0 0 15px rgba(255, 255, 255, 0.5);
-    /* Faint outer glow */
-    transition: opacity 2s ease-in-out;
+   position: fixed; 
+top: 40%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 6rem;
+font-weight: bold;
+color: black; /* Transparent text color */
+display: flex;
+justify-content: center;
+align-items: center;
+visibility: visible; /* Keep it visible */
+border-radius: 10px;
+padding: 20px;
+opacity: 1; /* Ensure the element is visible */
+text-shadow:
+    0 0 5px rgba(250, 249, 249, 0.9), /* Sharper, brighter glow */
+    0 0 10px rgba(255, 255, 255, 0.7), /* Medium glow */
+    0 0 15px rgba(255, 255, 255, 0.5); /* Faint outer glow */
+transition: opacity 3s ease-in-out;
+
+background: transparent; /* Make the background transparent */
+box-shadow: none; /* Remove any box-shadow if present */
+
+
 }
 
 /* Animation for the letters of "ANGEL" */

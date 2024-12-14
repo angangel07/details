@@ -19,7 +19,7 @@ class Firework {
         this.y = y;
         this.targetX = targetX;
         this.targetY = targetY;
-        this.speed = Math.random() * 3 + 2;
+        this.speed = Math.random() * 8 + 2;
         this.radius = Math.random() * 3 + 2;
         this.angle = Math.atan2(targetY - y, targetX - x);
         this.distanceToTarget = Math.hypot(targetX - x, targetY - y);
@@ -62,7 +62,7 @@ class Firework {
 
         for (let i = 0; i < particleCount; i++) {
             const angle = Math.random() * Math.PI * 2;
-            const speed = Math.random() * 4 + 2;
+            const speed = Math.random() * 6 + 2;
             const color = `hsl(${Math.random() * 360}, 100%, 60%)`; // Fixed color format
             this.particles.push(new Particle(this.x, this.y, angle, speed, color, shape));
         }
@@ -86,7 +86,7 @@ class Particle {
         this.x += Math.cos(this.angle) * this.speed;
         this.y += Math.sin(this.angle) * this.speed;
         this.speed *= 0.98; // Slows down over time
-        this.alpha -= 0.02; // Gradually disappears
+        this.alpha -= 0.01; // Gradually disappears
     }
 
     draw() {

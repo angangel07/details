@@ -62,7 +62,7 @@ class Firework {
 
         for (let i = 0; i < particleCount; i++) {
             const angle = Math.random() * Math.PI * 2;
-            const speed = Math.random() * 6 + 2;
+            const speed = Math.random() * 4 + 2;
             const color = `hsl(${Math.random() * 360}, 100%, 60%)`; // Fixed color format
             this.particles.push(new Particle(this.x, this.y, angle, speed, color, shape));
         }

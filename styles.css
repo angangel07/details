@@ -109,9 +109,9 @@ border-radius: 10px;
 padding: 20px;
 opacity: 1; /* Ensure the element is visible */
 text-shadow:
-    0 0 5px rgba(250, 249, 249, 0.9), /* Sharper, brighter glow */
-    0 0 10px rgba(255, 255, 255, 0.7), /* Medium glow */
-    0 0 15px rgba(255, 255, 255, 0.5); /* Faint outer glow */
+    0 0 5px rgba(77, 243, 0, 0.9), /* Sharper, brighter glow */
+    0 0 10px rgba(30, 241, 23, 0.7), /* Medium glow */
+    0 0 15px rgba(73, 231, 41, 0.5); /* Faint outer glow */
 transition: opacity 3s ease-in-out;
 
 background: transparent; /* Make the background transparent */

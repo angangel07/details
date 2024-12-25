@@ -13,15 +13,16 @@
 
 <body>
     <div id="angelLogo">
-        <span>A</span>
-        <span>N</span>
-        <span>G</span>
-        <span>E</span>
-        <span>L</span>
+        <span>D　</span>
+        <span>!　</span>
+        <span>W　</span>
+        <span>◬　</span>
+        <span>⚡︎　</span>
+        <span>ツ</span>
     </div>
-    
-      <canvas id="fireworksCanvas"></canvas>
-    
+
+    <canvas id="fireworksCanvas"></canvas>
+
     <canvas id="fireworks"></canvas>
 
     <main class="center-text">
@@ -31,15 +32,47 @@
             <strong>Tiktok:</strong> <a href="https://www.tiktok.com/@angel.ang.07" target="_blank">angel.ang.07</a> |
             <strong>Email:</strong> <a href="mailto:lamsaldiwas1119@gmail.com">lamsaldiwas1119@gmail.com</a> |
             <strong>Country:</strong>
-            <a href="https://www.google.com/maps/place/Lamsal+Niwas/@26.6435063,87.5536393,487m/data=!3m1!1e3!4m6!3m5!1s0x39e5892594663ae5:0xb6d543b6e19ce78!8m2!3d26.6435751!4d87.5543362!16s%2Fg%2F11h7g3ggtg?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D" target="_blank">Nepal</a>
+            <a href="https://www.google.com/maps/place/Lamsal+Niwas/@26.6435063,87.5536393,487m/data=!3m1!1e3!4m6!3m5!1s0x39e5892594663ae5:0xb6d543b6e19ce78!8m2!3d26.6435751!4d87.5543362!16s%2Fg%2F11h7g3ggtg?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D"
+                target="_blank">Nepal</a>
         </p>
 
     </main>
+    <div id="wifiSpeed">
+        <div id="ping">Ping: -- ms</div>
+        <div id="speed">Speed: -- Mbps</div>
+    </div>
+
 
     <footer>
         <p>© 2024 by Diwas Lamsal - Angel. All rights reserved. Double click any where !</p>
     </footer>
+    <script>
+        async function measurePing() {
+            const startTime = Date.now();
+            await fetch("https://www.google.com", { method: "HEAD", cache: "no-store" });
+            const endTime = Date.now();
+            const ping = endTime - startTime;
+            document.getElementById("ping").innerText = `Ping: ${ping} ms`;
+        }
 
+        async function measureSpeed() {
+            const startTime = Date.now();
+            const response = await fetch("https://speed.hetzner.de/10MB.bin"); // Test file for download
+            const endTime = Date.now();
+            const fileSize = 10 * 1024 * 1024; // 10 MB in bytes
+            const duration = (endTime - startTime) / 1000; // seconds
+            const speedMbps = (fileSize / duration / (1024 * 1024)).toFixed(2); // Mbps
+            document.getElementById("speed").innerText = `Speed: ${speedMbps} Mbps`;
+        }
+
+        function updateMetrics() {
+            measurePing();
+            measureSpeed();
+        }
+
+        updateMetrics();
+        setInterval(updateMetrics, 30000); // Update every 30 seconds
+    </script>
     <script src="fireworks.js"></script>
 </body>
 
